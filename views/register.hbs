@@ -2,11 +2,16 @@
   <img src="" alt="" />
 </header>
 <main>
+  {{#each errors}}
+    <h2>{{this}}</h2>
+  {{/each}}
   <form class="" action="/users/register" method="post">
     <label for="email">Enter Email</label>
     <input type="text" name="email" value="" id="email">
     <label for="password">Enter Password</label>
     <input type="password" name="password" value="" id="password">
-    <button type="submit" name="button">Regsiter User</button>
+    <label for="name">Enter Username</label>
+    <input type="text" name="name" value="" id="name">
+    <button type="submit">Regsiter User</button>
   </form>
 </main>

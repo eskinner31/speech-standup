@@ -1,0 +1,12 @@
+<main>
+  <h1>Welcome {{name}}</h1>
+  <h2>{{_id}}</h2>
+  <a href="/users/logout">Log Out</a>
+  <a href="/users/{{_id}}/registerteams">Create New Team</a>
+
+  {{#teams}}
+    <p>
+      {{team_name}}
+    </p>
+  {{/teams}}
+</main>

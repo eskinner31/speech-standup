@@ -7,6 +7,11 @@
 
   --Duck Tales--
 </p>
+{{#if session}}
+  <h1>{{name}}</h1>
+{{else}}
+{{/if}}
 <a href="/about">About</a>
 <a href="/users/login">Login</a>
 <a href="/users/register">Register</a>
+<a href="/users/logout">Log Out</a>
