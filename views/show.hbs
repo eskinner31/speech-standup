@@ -3,10 +3,15 @@
   <h2>{{_id}}</h2>
   <a href="/users/logout">Log Out</a>
   <a href="/users/{{_id}}/registerteams">Create New Team</a>
+  <a href="/users/{{_id}}/new">New Stand-Up</a>
 
   {{#teams}}
     <p>
       {{team_name}}
     </p>
   {{/teams}}
+
+  {{#posts}}
+  <a href="/posts/{{_id}}">{{name}}</a>
+  {{/posts}}
 </main>

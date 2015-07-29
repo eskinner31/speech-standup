@@ -94,18 +94,39 @@ router.post('/:id/registerteams',function(req,res,next){
   })
 });
 
-router.get('/:id',function(req,res,next){
-  users.findOne({_id: req.params.id}, function(err,user){
-    if(user.teams){
-      teams.find({_id: {$in: user.teams}},function(err,teams){
-        console.log("this is the teams ",teams.team_name)
-        res.render('show',{user: user, teams: teams})
-      })
-    }else{
-      res.render('show',user)
-    }
+router.get('/:id/new',function(req,res,next){
+  users.findOne({_id:req.params.id},function(err,user){
+    res.render('standupapp',user)
   })
 })
+
+router.post('/:id/new',function(req,res,next){
+  posts.insert(req.body, function(err, post){
+    if(err){
+      return err
+    }else{
+      users.update({_id:req.params.id},{$push:{posts: post._id}},function(err,user){
+        if(err){
+          return err
+        }else{
+          res.redirect('/users/'+req.params.id)
+        }
+      })
+    }
+  })
+});
+
+router.get('/:id',function(req,res,next){
+  users.findOne({_id: req.params.id}, function a(err,user){
+    teams.find({_id: {$in: user.teams}},function b(err,teams){
+      user.teams = teams;
+      posts.find({_id: {$in: user.posts}}, function c(err,posts){
+        user.posts = posts;
+        res.render('show', user)
+      })
+    })
+  })
+});
 
 
 

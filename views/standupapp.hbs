@@ -1,12 +1,16 @@
 <main>
-  <form class="" action="index.html" method="post">
-    <input type="text" name="name" value="">
+  <!-- Select Data Base,
+  Start Voice Processing,
+  Save, Clear and Email the Stand Up -->
+  <form class="" action="/users/{{_id}}/new" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="name" value="" id="title">
     <label for="help">Helps</label>
-    <textarea name="help" rows="8" cols="40" id="help"></textarea>
+    <textarea name="help" rows="8" cols="40" id="help" class="textarea"></textarea>
     <label for="interesting">Interesting</label>
-    <textarea name="interesting" rows="8" cols="40" id="interesting"></textarea>
+    <textarea name="interesting" rows="8" cols="40" id="interesting" class="textarea"></textarea>
     <label for="events">Events</label>
-    <textarea name="events" rows="8" cols="40" id="events"></textarea>
-    <button type="submit" name="button"></button>
+    <textarea name="events" rows="8" cols="40" id="events" class="textarea"></textarea>
+    <button type="submit">Save</button>
   </form>
 </main>

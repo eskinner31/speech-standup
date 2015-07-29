@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var posts = require('./routes/posts');
+var teams = require('./routes/teams');
 
 
 var app = express();
@@ -31,6 +33,8 @@ app.use(cookieSession({
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/posts', posts);
+app.use('/teams', teams);
 
 
 // catch 404 and forward to error handler
