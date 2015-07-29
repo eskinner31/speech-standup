@@ -16,7 +16,7 @@ recognition.onresult = function (event) {
     if (event.results[i].final) {
       result += event.results[i][0].transcript;
     }else{
-      result += event.results[i][0].transcript;
+      result += '- '+event.results[i][0].transcript+'&#13;&#10;';
     }
   }
   // console.log(target);

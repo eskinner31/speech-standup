@@ -3,6 +3,11 @@
   Start Voice Processing,
   Save, Clear and Email the Stand Up -->
   <form class="" action="/users/{{_id}}/new" method="post">
+    <select name="teams" class="">
+      {{#teams}}
+        <option name="teamselect" value='{{team_name}}'>{{team_name}}</option>
+      {{/teams}}
+    </select>
     <label for="title">Title</label>
     <input type="text" name="name" value="" id="title">
     <label for="help">Helps</label>

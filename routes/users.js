@@ -6,6 +6,8 @@ var users = db.get('users');
 var teams = db.get('teams');
 var posts = db.get('posts');
 var bcrypt = require('bcryptjs');
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport();
 
 
 
@@ -96,23 +98,36 @@ router.post('/:id/registerteams',function(req,res,next){
 
 router.get('/:id/new',function(req,res,next){
   users.findOne({_id:req.params.id},function(err,user){
-    res.render('standupapp',user)
+    teams.find({_id: {$in: user.teams}}, function (err,teams){
+      user.teams = teams;
+      res.render('standupapp',user)
+    })
   })
 })
 
 router.post('/:id/new',function(req,res,next){
-  posts.insert(req.body, function(err, post){
-    if(err){
-      return err
-    }else{
-      users.update({_id:req.params.id},{$push:{posts: post._id}},function(err,user){
-        if(err){
-          return err
-        }else{
-          res.redirect('/users/'+req.params.id)
-        }
-      })
-    }
+  console.log(req.body.teams)
+  teams.findOne({team_name: req.body.teams},function(err,team){
+    console.log(team)
+    transporter.sendMail({
+        from: 'standupapp@standup.com',
+        to: team.team_emails,
+        subject: req.body.name,
+        html: '<table><tr><th>Helps</th><th>Interesting</th><th>Events</th></tr><tr><td>'+req.body.help+'</td><td>'+req.body.interesting+'</td><td>'+req.body.events+'</td></tr></table>'
+    });
+    posts.insert({name: req.body.name, help: req.body.help, interesting: req.body.interesting, events: req.body.events}, function(err, post){
+      if(err){
+        return err
+      }else{
+        users.update({_id:req.params.id},{$push:{posts: post._id}},function(err,user){
+          if(err){
+            return err
+          }else{
+            res.redirect('/users/'+req.params.id)
+          }
+        })
+      }
+    })
   })
 });
 
