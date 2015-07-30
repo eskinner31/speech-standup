@@ -1,19 +1,21 @@
 <main class="show">
-  <h1>Welcome {{name}}</h1>
-  <a href="/">Home Page</a>
-  <a href="/users/{{_id}}/registerteams">Create New Team</a>
-  <a href="/users/{{_id}}/new">New Stand-Up</a>
-  <a href="/users/logout">Log Out</a>
-  {{#teams}}
-    <p>
-      {{team_name}}
-    </p>
-  {{/teams}}
-
-  {{#posts}}
-  <a href="/posts/{{_id}}">{{name}}</a>
-  {{/posts}}
+  <section>
+    <h1>Welcome {{name}}</h1>
+    <a href="/">Home Page</a>
+    <a href="/users/{{_id}}/registerteams">Create New Team</a>
+    <a href="/users/{{_id}}/new">New Stand-Up</a>
+    <a href="/users/logout">Log Out</a>
+  </section>
+  <section class="showsection">
+    <h3>Teams</h3>
+    {{#teams}}
+      <p>{{team_name}}</p>
+    {{/teams}}
+  </section>
+  <section class="showsection">
+    <h3>Posts</h3>
+    {{#posts}}
+      <p>{{name}}</p>
+    {{/posts}}
+  </section>
 </main>
-<aside class="sidebar">
-  
-</aside>

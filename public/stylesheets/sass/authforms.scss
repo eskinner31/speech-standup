@@ -1,25 +1,42 @@
 .input {
   margin-top: 30px;
-  width: 60%;
+  width: 40%;
   margin: 0 auto;
-   * {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .authform {
-  * {
-    display: block;
-  }
+  height: 300px;
+  border: 5px solid $color1;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
   color: $color1;
   font-size: 20px;
+  label {
+    margin-top: 20px;
+    display:block;
+    text-align: center;
+  }
   input{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
     width: 40%;
-    align: center;
   }
   button{
-    width: 20%;
+    margin: 0 auto;
+    display: block;
+    width: 30%;
     border-radius: 5px;
     background-color: $color5;
+  }
+  textarea{
+    width: 60%;
+    height: 40%;
+    border-radius: 5px;
+    
   }
 }

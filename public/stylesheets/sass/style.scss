@@ -4,6 +4,7 @@
 @import "authforms";
 
 
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -34,4 +35,81 @@ html {
     margin-top: 30px;
     text-align: center;
   }
+}
+
+main {
+  text-align: center;
+  color: $color1;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.show {
+  h1 {
+    margin-bottom: 20px;
+  }
+  a {
+    margin-bottom: 20px;
+  }
+
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.showsection{
+  width: 50%;
+  border: 2px solid $color1;
+  border-radius: 5px;
+  display: inline-block;
+  float: left;
+}
+
+.show {
+  textarea {
+    width: 20%;
+    border-radius: 5px;
+    float: left;
+  }
+}
+
+.apppage {
+  margin-top: 20px;
+  * {
+    margin-top: 5px;
+  }
+}
+
+.appform{
+  label {
+    margin-top: 10px;
+  }
+  select {
+    border-radius: 5px;
+    border: 2px solid $color1;
+  }
+  input {
+    border-radius: 5px;
+    border: 2px solid $color1;
+  }
+  button {
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    border-radius: 5px;
+    background-color: $color5;
+  }
+  textarea {
+    display: block;
+    margin-top: 15px;
+    border: 2px solid $color1;
+    border-radius: 5px;
+  }
+}
+.appnav {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+
 }

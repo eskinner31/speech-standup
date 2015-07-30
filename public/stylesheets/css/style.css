@@ -378,23 +378,39 @@ a {
 
 .input {
   margin-top: 30px;
-  width: 60%;
-  margin: 0 auto; }
-  .input * {
-    text-align: center; }
+  width: 40%;
+  margin: 0 auto;
+  text-align: center; }
 
 .authform {
+  height: 300px;
+  border: 5px solid #052f5f;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
   color: #052f5f;
   font-size: 20px; }
-  .authform * {
-    display: block; }
+  .authform label {
+    margin-top: 20px;
+    display: block;
+    text-align: center; }
   .authform input {
-    width: 40%;
-    align: center; }
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+    width: 40%; }
   .authform button {
-    width: 20%;
+    margin: 0 auto;
+    display: block;
+    width: 30%;
     border-radius: 5px;
     background-color: #f1a208; }
+  .authform textarea {
+    width: 60%;
+    height: 40%;
+    border-radius: 5px; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -423,3 +439,64 @@ html {
   .about * {
     margin-top: 30px;
     text-align: center; }
+
+main {
+  text-align: center;
+  color: #052f5f;
+  width: 40%;
+  margin: 0 auto; }
+
+.show h1 {
+  margin-bottom: 20px; }
+
+.show a {
+  margin-bottom: 20px; }
+
+section {
+  margin-bottom: 20px; }
+
+.showsection {
+  width: 50%;
+  border: 2px solid #052f5f;
+  border-radius: 5px;
+  display: inline-block;
+  float: left; }
+
+.show textarea {
+  width: 20%;
+  border-radius: 5px;
+  float: left; }
+
+.apppage {
+  margin-top: 20px; }
+  .apppage * {
+    margin-top: 5px; }
+
+.appform label {
+  margin-top: 10px; }
+
+.appform select {
+  border-radius: 5px;
+  border: 2px solid #052f5f; }
+
+.appform input {
+  border-radius: 5px;
+  border: 2px solid #052f5f; }
+
+.appform button {
+  margin: 0 auto;
+  display: block;
+  width: 30%;
+  border-radius: 5px;
+  background-color: #f1a208; }
+
+.appform textarea {
+  display: block;
+  margin-top: 15px;
+  border: 2px solid #052f5f;
+  border-radius: 5px; }
+
+.appnav {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center; }

@@ -10,7 +10,7 @@ var bcrypt = require('bcryptjs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  if(req.session.email){
+  if(req.session.email){ 
     res.render('index', { title: 'The Natural Language Stand-Up App', session: req.session.email, name: req.session.email});
   }else{
     res.render('index', { title: 'The Natural Language Stand-Up App' });
