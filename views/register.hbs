@@ -1,11 +1,10 @@
-<header>
-  <img src="" alt="" />
+<header class="header">
 </header>
-<main>
+<main class="input">
   {{#each errors}}
     <h2>{{this}}</h2>
   {{/each}}
-  <form class="" action="/users/register" method="post">
+  <form class="authform" action="/users/register" method="post">
     <label for="email">Enter Email</label>
     <input type="text" name="email" value="" id="email">
     <label for="password">Enter Password</label>

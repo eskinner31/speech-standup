@@ -1,8 +1,10 @@
-<main>
-  <!-- Select Data Base,
-  Start Voice Processing,
-  Save, Clear and Email the Stand Up -->
-  <form class="" action="/users/{{_id}}/new" method="post">
+<nav class="appnav">
+  <a href="/">Home Page</a>
+  <a href="/users/{{_id}}">Profile Page</a>
+  <a href="/users/logout">Log Out</a>
+</nav>
+<main class="apppage">
+  <form class="appform" action="/users/{{_id}}/new" method="post">
     <select name="teams" class="">
       {{#teams}}
         <option name="teamselect" value='{{team_name}}'>{{team_name}}</option>
@@ -16,6 +18,6 @@
     <textarea name="interesting" rows="8" cols="40" id="interesting" class="textarea"></textarea>
     <label for="events">Events</label>
     <textarea name="events" rows="8" cols="40" id="events" class="textarea"></textarea>
-    <button type="submit">Save</button>
+    <button type="submit">Save and Send</button>
   </form>
 </main>

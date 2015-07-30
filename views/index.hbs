@@ -1,17 +1,23 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-<p>
-  Some Sales Pitch text that explains why this application
-  is something that everyone will want to use. By doing so they
-  will make me ooddles of cash. I will be rich, Muwhahaha
+<header class="header">
+  <h1>{{title}}</h1>
+  <h3>Welcome to{{title}}</h3>
+  {{#if session}}
+    <h3>Welcome {{name}}</h3>
+    <a href="/about">About</a>
+    <a href="/users/logout">Log Out</a>
+    <a href="/users/{{_id}}">Profile Page</a>
+  {{else}}
+    <a href="/about">About</a>
+    <a href="/users/login">Login</a>
+    <a href="/users/register">Register</a>
+  {{/if}}
+</header>
+<main>
+  <p>
+    Some Sales Pitch text that explains why this application
+    is something that everyone will want to use. By doing so they
+    will make me ooddles of cash. I will be rich, Muwhahaha
 
-  --Duck Tales--
-</p>
-{{#if session}}
-  <h1>{{name}}</h1>
-{{else}}
-{{/if}}
-<a href="/about">About</a>
-<a href="/users/login">Login</a>
-<a href="/users/register">Register</a>
-<a href="/users/logout">Log Out</a>
+    --Duck Tales--
+  </p>
+</main>

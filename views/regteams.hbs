@@ -1,9 +1,12 @@
-<header>
+<header class="header">
   <h1>Teams Page</h1>
+  <a href="/">Home Page</a>
+  <a href="/users/{{_id}}">Profile Page</a>
+  <a href="/users/logout">Log Out</a>
 </header>
-<main>
+<main class="input">
   <h3>Insert Team</h3>
-  <form class="" action="/users/{{_id}}/registerteams" method="post">
+  <form class="authform" action="/users/{{_id}}/registerteams" method="post">
     <label for="name">Team Name</label>
     <input type="text" name="team_name" value="" id="name">
     <label for="email">Member Emails</label>

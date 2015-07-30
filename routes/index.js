@@ -10,11 +10,15 @@ var bcrypt = require('bcryptjs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'NLP Stand-UP' });
+  if(req.session.email){
+    res.render('index', { title: 'The Natural Language Stand-Up App', session: req.session.email, name: req.session.email});
+  }else{
+    res.render('index', { title: 'The Natural Language Stand-Up App' });
+  }
 });
 
 router.get('/about', function(req,res,next){
-  res.render('about',{});
+  res.render('about',{ title: 'The Natural Language Stand-Up App' });
 });
 
 module.exports = router;

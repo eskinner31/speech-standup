@@ -1,0 +1,25 @@
+.input {
+  margin-top: 30px;
+  width: 60%;
+  margin: 0 auto;
+   * {
+    text-align: center;
+  }
+}
+
+.authform {
+  * {
+    display: block;
+  }
+  color: $color1;
+  font-size: 20px;
+  input{
+    width: 40%;
+    align: center;
+  }
+  button{
+    width: 20%;
+    border-radius: 5px;
+    background-color: $color5;
+  }
+}

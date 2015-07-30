@@ -1,0 +1,37 @@
+@import "normalize";
+@import "palette";
+@import "navigation";
+@import "authforms";
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.header{
+  margin: 0;
+  padding: 100px;
+  height: 400px;
+  background-image: url('http://www.splitshire.com/wp-content/uploads/2015/07/SplitShire-0164-1800x1200-970x500.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.about{
+  width: 60%;
+  margin: 0 auto;
+  * {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

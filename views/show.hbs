@@ -1,10 +1,9 @@
-<main>
+<main class="show">
   <h1>Welcome {{name}}</h1>
-  <h2>{{_id}}</h2>
-  <a href="/users/logout">Log Out</a>
+  <a href="/">Home Page</a>
   <a href="/users/{{_id}}/registerteams">Create New Team</a>
   <a href="/users/{{_id}}/new">New Stand-Up</a>
-
+  <a href="/users/logout">Log Out</a>
   {{#teams}}
     <p>
       {{team_name}}
@@ -15,3 +14,6 @@
   <a href="/posts/{{_id}}">{{name}}</a>
   {{/posts}}
 </main>
+<aside class="sidebar">
+  
+</aside>
